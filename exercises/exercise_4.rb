@@ -17,6 +17,6 @@ Store.all.each do |store|
   puts "#{store.name}'s annual revenue': #{store.annual_revenue}"
 end
 
-@womens_stores = Store.where("womens_apparel = ? AND annual_revenue > ?", true, 1000000)
+@womens_stores = Store.where("womens_apparel = ? AND annual_revenue < ?", true, 1000000)
 
 puts Store.count
